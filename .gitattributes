@@ -44,7 +44,9 @@
 *.jpeg   binary
 *.png   binary
 *.gif   binary
-
+*.mp4   binary
+*.mv4   binary
+*.h5    binary
 ###############################################################################
 # diff behavior for common document formats
 # 
