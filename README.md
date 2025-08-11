@@ -2,7 +2,8 @@
 
 ## Kernel
 
-- Use `/usr/bin/python` kernel selection from the top-right corner.
+- Run `pipenv install` to create a venv.
+- From "Select Kernel" in the top-right corner, choose "Python environments..", then select the venv name created in the previous step.
 
 ## Environment
 
