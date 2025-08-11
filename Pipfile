@@ -7,8 +7,12 @@ name = "pypi"
 nbconvert = "*"
 papermill = "*"
 ipython-sql = "*"
+numpy = "*"
+matplotlib = "*"
+pandas = "*"
+scikit-learn = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.11"
+python_version = "3.13"
