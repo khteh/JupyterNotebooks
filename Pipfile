@@ -12,6 +12,10 @@ matplotlib = "*"
 pandas = "*"
 scikit-learn = "*"
 seaborn = "*"
+keras-preprocessing = "*"
+tensorflow = {extras = ["and-cuda"], version = "*"}
+tf-keras = "*"
+tabulate = "*"
 
 [dev-packages]
 ipykernel = "*"

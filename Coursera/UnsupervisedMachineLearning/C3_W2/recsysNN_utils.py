@@ -1,10 +1,7 @@
 """ Utilities for RecSysNN assigment """
 from collections import defaultdict
-import csv
-import numpy as np
+import csv, pickle, tabulate, numpy as np
 from numpy import genfromtxt
-import pickle5 as pickle
-import tabulate
 
 
 def load_data():
