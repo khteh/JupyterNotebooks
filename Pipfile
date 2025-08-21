@@ -16,6 +16,7 @@ keras-preprocessing = "*"
 tensorflow = {extras = ["and-cuda"], version = "*"}
 tf-keras = "*"
 tabulate = "*"
+ipywidgets = "*"
 
 [dev-packages]
 ipykernel = "*"

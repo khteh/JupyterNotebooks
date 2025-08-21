@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "d2be7e5c58a329812bbe060e99f5b5046b2ac85ae580330c8ef43c14ce246252"
+            "sha256": "beed1998d01ef8e5ae658d28a52a112e3e13b5f7bb7498f382bf73d062e0526d"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -173,6 +173,14 @@
             ],
             "markers": "python_version >= '3.10'",
             "version": "==8.2.1"
+        },
+        "comm": {
+            "hashes": [
+                "sha256:2dc8048c10962d55d7ad693be1e7045d891b7ce8d999c97963a5e3e99c055971",
+                "sha256:c615d91d75f7f04f095b30d1c1711babd43bdc6419c1be9886a85f2f4e489417"
+            ],
+            "markers": "python_version >= '3.8'",
+            "version": "==0.2.3"
         },
         "contourpy": {
             "hashes": [
@@ -558,6 +566,15 @@
             "index": "pypi",
             "version": "==0.5.0"
         },
+        "ipywidgets": {
+            "hashes": [
+                "sha256:15f1ac050b9ccbefd45dccfbb2ef6bed0029d8278682d569d71b8dd96bee0376",
+                "sha256:764f2602d25471c213919b8a1997df04bef869251db4ca8efba1b76b1bd9f7bb"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.7'",
+            "version": "==8.1.7"
+        },
         "jedi": {
             "hashes": [
                 "sha256:4770dc3de41bde3966b02eb84fbcf557fb33cce26ad23da12c742fb50ecb11f0",
@@ -621,6 +638,14 @@
             ],
             "markers": "python_version >= '3.8'",
             "version": "==0.3.0"
+        },
+        "jupyterlab-widgets": {
+            "hashes": [
+                "sha256:2920888a0c2922351a9202817957a68c07d99673504d6cd37345299e971bb08b",
+                "sha256:d59023d7d7ef71400d51e6fee9a88867f6e65e10a4201605d2d7f3e8f012a31c"
+            ],
+            "markers": "python_version >= '3.7'",
+            "version": "==3.0.15"
         },
         "keras": {
             "hashes": [
@@ -2310,6 +2335,14 @@
             ],
             "markers": "python_version >= '3.8'",
             "version": "==0.45.1"
+        },
+        "widgetsnbextension": {
+            "hashes": [
+                "sha256:4875a9eaf72fbf5079dc372a51a9f268fc38d46f767cbf85c43a36da5cb9b575",
+                "sha256:a3629b04e3edb893212df862038c7232f62973373869db5084aed739b437b5af"
+            ],
+            "markers": "python_version >= '3.7'",
+            "version": "==4.0.14"
         },
         "wrapt": {
             "hashes": [
