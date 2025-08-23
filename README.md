@@ -15,3 +15,8 @@
 [global]
 break-system-packages = true
 ```
+
+## Applications
+
+1. Heart Disease Prediction
+2. Bulldozer sale price prediction
