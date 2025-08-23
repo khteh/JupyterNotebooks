@@ -19,4 +19,7 @@ break-system-packages = true
 ## Applications
 
 1. Heart Disease Prediction
+   - https://archive.ics.uci.edu/dataset/45/heart+disease
+   - https://www.kaggle.com/datasets/sumaiyatasmeem/heart-disease-classification-dataset
 2. Bulldozer sale price prediction
+   - https://www.kaggle.com/competitions/bluebook-for-bulldozers/overview
