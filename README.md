@@ -3,7 +3,7 @@
 ## Kernel
 
 - Run `pipenv install` to create a venv.
-- From "Select Kernel" in the top-right corner, choose "Python environments..", then select the venv name created in the previous step.
+- In Visual Studio Code, from "Select Kernel" in the top-right corner, choose "Python environments..", then select the venv name created in the previous step.
 
 ## Environment
 
