@@ -23,3 +23,11 @@ break-system-packages = true
    - https://www.kaggle.com/datasets/sumaiyatasmeem/heart-disease-classification-dataset
 2. Bulldozer sale price prediction
    - https://www.kaggle.com/competitions/bluebook-for-bulldozers/overview
+3. Dog Breed Multi-class Classification
+   - https://www.kaggle.com/competitions/dog-breed-identification/overview
+
+## Model Diagnostics
+
+### Tensorboard
+
+- `pipenv run tensorboard --logdir <path>`

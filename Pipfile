@@ -14,9 +14,10 @@ scikit-learn = "*"
 seaborn = "*"
 keras-preprocessing = "*"
 tensorflow = {extras = ["and-cuda"], version = "*"}
-tf-keras = "*"
 tabulate = "*"
 ipywidgets = "*"
+tensorflow-hub = "*"
+tf-keras = "*"
 
 [dev-packages]
 ipykernel = "*"
