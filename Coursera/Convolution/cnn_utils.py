@@ -7,11 +7,11 @@ from tensorflow.python.framework import ops
 
 
 def load_happy_dataset():
-    train_dataset = h5py.File('data/train_happy.h5', "r")
+    train_dataset = h5py.File('../data/train_happy.h5', "r")
     train_set_x_orig = np.array(train_dataset["train_set_x"][:]) # your train set features
     train_set_y_orig = np.array(train_dataset["train_set_y"][:]) # your train set labels
 
-    test_dataset = h5py.File('data/test_happy.h5', "r")
+    test_dataset = h5py.File('../data/test_happy.h5', "r")
     test_set_x_orig = np.array(test_dataset["test_set_x"][:]) # your test set features
     test_set_y_orig = np.array(test_dataset["test_set_y"][:]) # your test set labels
 
@@ -23,11 +23,11 @@ def load_happy_dataset():
     return train_set_x_orig, train_set_y_orig, test_set_x_orig, test_set_y_orig, classes
 
 def load_signs_dataset():
-    train_dataset = h5py.File('data/train_signs.h5', "r")
+    train_dataset = h5py.File('../data/train_signs.h5', "r")
     train_set_x_orig = np.array(train_dataset["train_set_x"][:]) # your train set features
     train_set_y_orig = np.array(train_dataset["train_set_y"][:]) # your train set labels
 
-    test_dataset = h5py.File('data/test_signs.h5', "r")
+    test_dataset = h5py.File('../data/test_signs.h5', "r")
     test_set_x_orig = np.array(test_dataset["test_set_x"][:]) # your test set features
     test_set_y_orig = np.array(test_dataset["test_set_y"][:]) # your test set labels
 
