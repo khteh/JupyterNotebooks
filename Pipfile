@@ -23,6 +23,7 @@ mido = "*"
 pydub = "*"
 audioop-lts = "*"
 tqdm = "*"
+emoji = "*"
 
 [dev-packages]
 ipykernel = "*"
