@@ -1,5 +1,6 @@
 *.swp
 .ipynb_checkpoints
+data/glove.6B.50d.txt
 **/__pycache__/
 **/logs/
 **/.~lock*
