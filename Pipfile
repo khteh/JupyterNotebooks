@@ -18,6 +18,11 @@ tabulate = "*"
 ipywidgets = "*"
 tensorflow-hub = "*"
 tf-keras = "*"
+music21 = "*"
+mido = "*"
+pydub = "*"
+audioop-lts = "*"
+tqdm = "*"
 
 [dev-packages]
 ipykernel = "*"
