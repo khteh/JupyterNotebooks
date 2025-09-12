@@ -24,6 +24,8 @@ pydub = "*"
 audioop-lts = "*"
 tqdm = "*"
 emoji = "*"
+faker = "*"
+babel = "*"
 
 [dev-packages]
 ipykernel = "*"
