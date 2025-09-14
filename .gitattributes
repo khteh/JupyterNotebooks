@@ -47,6 +47,7 @@
 *.mp4   binary
 *.mv4   binary
 *.h5    binary
+*.gz    binary
 ###############################################################################
 # diff behavior for common document formats
 # 

@@ -1,6 +1,7 @@
 *.swp
 .ipynb_checkpoints
-**/data/glove.6B.50d.txt
+**/glove.6B.50d.txt
+**/glove.6B.100d.txt
 **/XY_dev
 **/XY_train
 **/__pycache__/
