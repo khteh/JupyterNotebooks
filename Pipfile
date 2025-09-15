@@ -26,6 +26,8 @@ tqdm = "*"
 emoji = "*"
 faker = "*"
 babel = "*"
+seqeval = "*"
+transformers = "*"
 
 [dev-packages]
 ipykernel = "*"
