@@ -28,6 +28,7 @@ faker = "*"
 babel = "*"
 seqeval = "*"
 transformers = "*"
+datasets = "*"
 
 [dev-packages]
 ipykernel = "*"
