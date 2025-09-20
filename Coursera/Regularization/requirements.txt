@@ -4,6 +4,6 @@
 dlai-tools==0.4.0
 h5py==2.10.0
 matplotlib==3.2.1
-numpy==1.18.4
+numpy==1.22.0
 scikit-learn==0.22.2.post1
 scipy==1.4.1
