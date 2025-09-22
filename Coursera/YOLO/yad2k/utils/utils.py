@@ -1,5 +1,4 @@
 """Draw predicted or ground truth boxes on input image."""
-import imghdr
 import colorsys
 import random
 
@@ -10,7 +9,6 @@ from tensorflow.keras import backend as K
 from functools import reduce
 
 def preprocess_image(img_path, model_image_size):
-    image_type = imghdr.what(img_path)
     image = Image.open(img_path)
     resized_image = image.resize(tuple(reversed(model_image_size)), Image.BICUBIC)
     image_data = np.array(resized_image, dtype='float32')
