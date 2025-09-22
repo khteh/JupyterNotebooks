@@ -19,7 +19,7 @@ from grammar import parse_melody
 from music_utils import *
 
 #----------------------------HELPER FUNCTIONS----------------------------------#
-
+# https://github.com/cuthbertLab/music21/issues/1813
 ''' Helper function to parse a MIDI file into its measures and chords '''
 def __parse_midi(data_fn):
     # Parse the MIDI data for separate melody and accompaniment parts.
