@@ -24,8 +24,26 @@ from music_utils import *
 def __parse_midi(data_fn):
     # Parse the MIDI data for separate melody and accompaniment parts.
     midi_data = converter.parse(data_fn)
+    """
+    A common arrangement of nested Streams is a Score Stream containing one or more Part Streams, each Part Stream in turn containing one or more Measure Streams.
+    Parts > Measures > Voice
+    """
+    #print(f"Parts: {len(midi_data.getElementsByClass(stream.Part))}")
+    #print(f"Parts: {len(midi_data.parts)}")
+    #print(f"Measure: {len(midi_data.getElementsByClass(stream.Part)[0].getElementsByClass(stream.Measure))}")
+    print(f"Show: {midi_data.show('text')}")
+    print("recurse():")
+    for el in midi_data.recurse().getElementsByClass(stream.Voice):
+        print(el.offset, el, el.activeSite)
     # Get melody part, compress into single voice.
     melody_stream = midi_data[5]     # For Metheny piece, Melody is Part #5.
+    print(f"{melody_stream.show('text')}")
+    #print(f"Melody Parts: {len(melody_stream.parts)}")
+    #print(f"Melody Voice: {len(melody_stream.getElementsByClass(stream.Voice))}")
+    #print(f"Melody Voice: {len(melody_stream.getElementsByClass(stream.Part)[0].getElementsByClass(stream.Voice))}")
+    for el in melody_stream.recurse():
+        print(el.offset, el, el.activeSite)
+
     melody1, melody2 =  melody_stream.recurse().getElementsByClass(stream.Voice)
     for j in melody2:
         melody1.insert(j.offset, j)
