@@ -1,7 +1,6 @@
 *.swp
 .ipynb_checkpoints
-**/glove.6B.50d.txt
-**/glove.6B.100d.txt
+**/glove.6B.*d.txt
 Coursera/Transformer/model/**/tf_model.h5
 **/*cache*
 **/XY_dev
