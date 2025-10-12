@@ -47,7 +47,6 @@ def process_tweet(tweet):
 def get_dict(file_name):
     """
     This function returns the english to french dictionary given a file where the each column corresponds to a word.
-    Check out the files this function takes in your workspace.
     """
     my_file = pd.read_csv(file_name, delimiter=' ')
     etof = {}  # the english to french dictionary to be returned
