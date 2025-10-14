@@ -1,5 +1,9 @@
 from termcolor import colored
+import numpy as np
+from termcolor import colored
 
+from tensorflow.keras.layers import Embedding
+from tensorflow.keras.layers import GRU
 from tensorflow.keras.layers import Input
 from tensorflow.keras.layers import Conv2D
 from tensorflow.keras.layers import MaxPooling2D
@@ -11,7 +15,18 @@ from tensorflow.keras.layers import Dense
 from tensorflow.keras.layers import LSTM
 from tensorflow.keras.layers import RepeatVector
 
-
+# extracts the description of a given model
+def summary1(model):
+    result = []
+    for layer in model.layers:
+        descriptors = [layer.__class__.__name__, layer.output_shape, layer.count_params()]
+        if (type(layer) == Dense):
+            descriptors.append(layer.activation.__name__.replace("_v2", ""))
+        if (type(layer) == GRU):
+            descriptors.append(f"return_sequences={layer.return_sequences}")
+            descriptors.append(f"return_state={layer.return_state}")
+        result.append(descriptors)
+    return result
 
 
 # Compare the two inputs
