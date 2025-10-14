@@ -29,6 +29,7 @@ babel = "*"
 seqeval = "*"
 transformers = "*"
 datasets = "*"
+nltk = "*"
 
 [dev-packages]
 ipykernel = "*"
