@@ -2,6 +2,8 @@
 .ipynb_checkpoints
 **/glove.6B.*d.txt
 Coursera/Transformer/model/**/tf_model.h5
+Coursera/BERT/distilbert-base-cased-distilled-squad
+Coursera/BERT/tydiqa_data/
 **/*cache*
 **/XY_dev
 **/XY_train
