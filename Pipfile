@@ -30,6 +30,7 @@ seqeval = "*"
 transformers = "*"
 datasets = "*"
 nltk = "*"
+sentencepiece = "*"
 
 [dev-packages]
 ipykernel = "*"
