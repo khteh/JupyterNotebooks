@@ -5,6 +5,7 @@ Coursera/Transformer/model/**/tf_model.h5
 Coursera/BERT/distilbert-base-cased-distilled-squad
 Coursera/BERT/tydiqa_data/
 Coursera/QuestionAnswering/pretrained_models
+Coursera/GAN/MNIST
 **/*cache*
 **/XY_dev
 **/XY_train
