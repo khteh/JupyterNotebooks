@@ -6,6 +6,8 @@ Coursera/BERT/distilbert-base-cased-distilled-squad
 Coursera/BERT/tydiqa_data/
 Coursera/QuestionAnswering/pretrained_models
 Coursera/GAN/MNIST
+Coursera/GAN/pre_trained_protein_gan*
+Coursera/GAN/state_normal81000.ckpt
 **/*cache*
 **/XY_dev
 **/XY_train

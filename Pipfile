@@ -31,6 +31,12 @@ transformers = "*"
 datasets = "*"
 nltk = "*"
 sentencepiece = "*"
+moviepy = "*"
+gdown = "*"
+torch = "*"
+torchvision = "*"
+biopython = "*"
+py3dmol = "*"
 
 [dev-packages]
 ipykernel = "*"
