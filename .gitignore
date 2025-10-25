@@ -8,6 +8,8 @@ Coursera/QuestionAnswering/pretrained_models
 Coursera/GAN/MNIST
 Coursera/GAN/pre_trained_protein_gan*
 Coursera/GAN/state_normal81000.ckpt
+Coursera/GAN/fid_images_tensor.npz
+Coursera/GAN/inception_v3_google-1a9a5a14.pth
 **/*cache*
 **/XY_dev
 **/XY_train
