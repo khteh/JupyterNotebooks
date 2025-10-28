@@ -13,6 +13,8 @@ Coursera/GAN/inception_v3_google-1a9a5a14.pth
 Coursera/GAN/vgg16-397923af.pth
 Coursera/GAN/maps
 Coursera/GAN/pix2pix_15000.pth
+Coursera/GAN/cycleGAN_100000.pth
+Coursera/GAN/horse2zebra/
 Coursera/UNet/data/CameraRGB
 **/*cache*
 **/XY_dev
