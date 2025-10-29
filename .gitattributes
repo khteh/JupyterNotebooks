@@ -57,6 +57,7 @@ Coursera/Transformer/model/QuestionAnswer/tf_model.h5 filter=lfs diff=lfs merge=
 Coursera/Transformer/model/NameEntityResolution/tf_model.h5 filter=lfs diff=lfs merge=lfs -text
 Coursera/BERT/distilbert-base-cased-distilled-squad/model.safetensors filter=lfs diff=lfs merge=lfs -text
 *.npz filter=lfs diff=lfs merge=lfs -text
+*.npy filter=lfs diff=lfs merge=lfs -text
 *.pth filter=lfs diff=lfs merge=lfs -text
 Coursera/GAN/maps filter=lfs diff=lfs merge=lfs -text
 Coursera/GAN/horse2zebra/ filter=lfs diff=lfs merge=lfs -text
@@ -64,8 +65,14 @@ Coursera/UNet/data/CameraRGB filter=lfs diff=lfs merge=lfs -text
 ZTM/data/bluebook-for-bulldozers/ filter=lfs diff=lfs merge=lfs -text
 ZTM/data/dog-breed-identification/ filter=lfs diff=lfs merge=lfs -text
 ZTM/models/EfficientNetV2L-224-dogbreed-20251002-190035.keras filter=lfs diff=lfs merge=lfs -text
-*.npy filter=lfs diff=lfs merge=lfs -text
 ZTM/data/bluebook-for-bulldozers/train_tmp.csv filter=lfs diff=lfs merge=lfs -text
 ZTM/data/bluebook-for-bulldozers/TransAndValid_preprocessed.csv filter=lfs diff=lfs merge=lfs -text
 ZTM/data/bluebook-for-bulldozers/Train.csv filter=lfs diff=lfs merge=lfs -text
 ZTM/data/bluebook-for-bulldozers/TrainAndValid.csv filter=lfs diff=lfs merge=lfs -text
+Coursera/Attention/data/embeddings* !text !filter !merge !diff
+Coursera/TriggerWordDetection/XY_dev !text !filter !merge !diff
+Coursera/TriggerWordDetection/XY_rain !text !filter !merge !diff
+Coursera/TriggerWordDetection/XY_train !text !filter !merge !diff
+Coursera/YOLO/yad2k/__init__.py !text !filter !merge !diff
+Coursera/QuestionAnswering/pretrained_models/model_qa3.data-00000-of-00001 !text !filter !merge !diff
+ZTM/data/bluebook-for-bulldozers/Train_processed.csv !text !filter !merge !diff
