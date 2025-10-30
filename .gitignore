@@ -1,6 +1,5 @@
 *.swp
 .ipynb_checkpoints
-Coursera/GAN/state_normal81000.ckpt
 **/*cache*
 **/__pycache__/
 **/logs/
