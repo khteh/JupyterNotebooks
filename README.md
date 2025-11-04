@@ -1,4 +1,6 @@
-# Jupiter Notebook using IPython kernel
+# Jupiter Notebooks
+
+AI, ML, DL, NLP and GAN exploration playground.
 
 ## Kernel
 
