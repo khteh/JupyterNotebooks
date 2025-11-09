@@ -37,6 +37,7 @@ torch = "*"
 torchvision = "*"
 biopython = "*"
 py3dmol = "*"
+opencv-python = "*"
 
 [dev-packages]
 ipykernel = "*"
