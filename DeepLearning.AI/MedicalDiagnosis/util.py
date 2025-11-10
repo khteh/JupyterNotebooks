@@ -479,9 +479,7 @@ class VolumeDataGenerator(keras.utils.Sequence):
         sample_list_temp = [self.sample_list[k] for k in indexes]
         # Generate data
         X, y = self.__data_generation(sample_list_temp)
-
         return X, y
-
 
 def get_labeled_image(image, label, is_categorical=False):
     if not is_categorical:
