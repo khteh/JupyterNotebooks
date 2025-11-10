@@ -38,6 +38,9 @@ torchvision = "*"
 biopython = "*"
 py3dmol = "*"
 opencv-python = "*"
+nibabel = "*"
+itk = "*"
+itkwidgets = "*"
 
 [dev-packages]
 ipykernel = "*"

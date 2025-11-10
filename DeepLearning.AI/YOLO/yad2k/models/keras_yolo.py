@@ -281,9 +281,9 @@ def yolo_loss(args,
     coordinates_loss = (coordinates_scale * detectors_mask *
                         K.square(matching_boxes - pred_boxes))
 
-    confidence_loss_sum = K.sum(confidence_loss)
-    classification_loss_sum = K.sum(classification_loss)
-    coordinates_loss_sum = K.sum(coordinates_loss)
+    confidence_loss_sum = tf.math.reduce_sum(confidence_loss)
+    classification_loss_sum = tf.math.reduce_sum(classification_loss)
+    coordinates_loss_sum = tf.math.reduce_sum(coordinates_loss)
     total_loss = 0.5 * (
         confidence_loss_sum + classification_loss_sum + coordinates_loss_sum)
     if print_loss:

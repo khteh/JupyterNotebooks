@@ -177,7 +177,7 @@ def softmax(x, axis=1):
         return K.softmax(x)
     elif ndim > 2:
         e = K.exp(x - K.max(x, axis=axis, keepdims=True))
-        s = K.sum(e, axis=axis, keepdims=True)
+        s = tf.math.reduce_sum(e, axis=axis, keepdims=True)
         return e / s
     else:
         raise ValueError('Cannot apply softmax to a tensor that is 1D')

@@ -3,28 +3,29 @@ import cv2
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from keras import backend as K
-from keras.preprocessing import image
-from sklearn.metrics import roc_auc_score, roc_curve
-from tensorflow.compat.v1.logging import INFO, set_verbosity
 import os
 import h5py
 import imageio
 import keras
 import tensorflow as tf
+
+from tensorflow.keras import backend as K
+from tensorflow.keras.preprocessing import image
+from sklearn.metrics import roc_auc_score, roc_curve
+from tensorflow.compat.v1.logging import INFO, set_verbosity
 from IPython.display import Image
-from keras import backend as K
-from keras.engine import Input, Model
-from keras.layers import (
+from tensorflow.keras import Model
+from tensorflow.keras.layers import (
+    Input,
     Activation,
+    concatenate,
     Conv3D,
-    Deconvolution3D,
+    Conv3DTranspose,
     MaxPooling3D,
     UpSampling3D,
 )
-from keras.layers.merge import concatenate
-from keras.optimizers import Adam
-from keras.utils import to_categorical
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.utils import to_categorical
 from tensorflow.compat.v1.logging import INFO, set_verbosity
 
 from sklearn.metrics import (
@@ -328,7 +329,7 @@ def get_up_convolution(n_filters, pool_size, kernel_size=(2, 2, 2),
                        strides=(2, 2, 2),
                        deconvolution=False):
     if deconvolution:
-        return Deconvolution3D(filters=n_filters, kernel_size=kernel_size,
+        return Conv3DTranspose(filters=n_filters, kernel_size=kernel_size,
                                strides=strides)
     else:
         return UpSampling3D(size=pool_size)
@@ -384,15 +385,13 @@ def unet_model_3d(loss_function, input_shape=(4, 160, 160, 16),
     for layer_depth in range(depth - 2, -1, -1):
         up_convolution = get_up_convolution(pool_size=pool_size,
                                             deconvolution=deconvolution,
-                                            n_filters=
-                                            current_layer._keras_shape[1])(
-            current_layer)
+                                            n_filters=current_layer.shape[1])(current_layer)
         concat = concatenate([up_convolution, levels[layer_depth][1]], axis=1)
         current_layer = create_convolution_block(
-            n_filters=levels[layer_depth][1]._keras_shape[1],
+            n_filters=levels[layer_depth][1].shape[1],
             input_layer=concat, batch_normalization=batch_normalization)
         current_layer = create_convolution_block(
-            n_filters=levels[layer_depth][1]._keras_shape[1],
+            n_filters=levels[layer_depth][1].shape[1],
             input_layer=current_layer,
             batch_normalization=batch_normalization)
 
@@ -403,7 +402,7 @@ def unet_model_3d(loss_function, input_shape=(4, 160, 160, 16),
     if not isinstance(metrics, list):
         metrics = [metrics]
 
-    model.compile(optimizer=Adam(lr=initial_learning_rate), loss=loss_function,
+    model.compile(optimizer=Adam(learning_rate=initial_learning_rate), loss=loss_function,
                   metrics=metrics)
     return model
 

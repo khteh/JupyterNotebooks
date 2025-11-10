@@ -121,11 +121,11 @@ def multiple_test(test_cases, target):
         print('\033[91m', len(test_cases) - success, " Tests failed")
         raise AssertionError("Not all tests were passed for {}. Check your equations and avoid using global variables inside the function.".format(target.__name__))
         
-def multiple_test_weight_loss(test_cases, target, sess):
+def multiple_test_weight_loss(test_cases, target):
     success = 0
     for test_case in test_cases:
         try:
-            target_answer = target(*test_case['input']).eval(session=sess)                   
+            target_answer = target(*test_case['input']).numpy()
             if test_case['name'] == "datatype_check":
                 success += datatype_check(test_case['expected'], target_answer, test_case['error'])
             if test_case['name'] == "equation_output_check":
@@ -142,5 +142,63 @@ def multiple_test_weight_loss(test_cases, target, sess):
         print('\033[91m', len(test_cases) - success, " Tests failed")
         raise AssertionError("Not all tests were passed for {}. Check your equations and avoid using global variables inside the function.".format(target.__name__))
         
+def multiple_test_get_sub_volume(test_cases, target):
+    success = 0
+    func_answer = 0
+    for test_case in test_cases:
+        try:
+            target_answer = target(*test_case['input'])
+            learner_func_answer = target_answer
+            
+            if test_case['name'] == "datatype_check":
+                success += datatype_check(test_case['expected'], target_answer, test_case['error'])
+            if test_case['name'] == "equation_output_check":
+                success += equation_output_check(test_case['expected'], target_answer, test_case['error'])
+            if test_case['name'] == "shape_check":
+                success += shape_check(test_case['expected'], target_answer, test_case['error'])
+        except:
+            print("Error: " + test_case['error'])
+            
+    if success == len(test_cases):
+        print("\033[92m All tests passed.")
+    else:
+        learner_func_sample_image, learner_func_sample_label = learner_func_answer
         
+        print("\033[0m\nSampled Image:")
+        for k in range(2):
+            print("z = " + str(k))
+            print(learner_func_sample_image[0, :, :, k])
         
+        print("\nSampled Label:")
+        for c in range(2):
+            print("class = " + str(c))
+            for k in range(2):
+                print("z = " + str(k))
+                print(learner_func_sample_label[c, :, :, k])
+                
+        print('\033[92m', success," Tests passed")
+        print('\033[91m', len(test_cases) - success, " Tests failed")
+        raise AssertionError("Not all tests were passed for {}. Check your equations and avoid using global variables inside the function.".format(target.__name__))
+        
+    return learner_func_answer
+
+def multiple_test_dice(test_cases, target):
+    success = 0
+    for test_case in test_cases:
+        try:
+            target_answer = target(*test_case['input']).numpy()
+            if test_case['name'] == "datatype_check":
+                success += datatype_check(test_case['expected'], target_answer, test_case['error'])
+            if test_case['name'] == "equation_output_check":
+                success += equation_output_check(test_case['expected'], target_answer, test_case['error'])
+            if test_case['name'] == "shape_check":
+                success += shape_check(test_case['expected'], target_answer, test_case['error'])
+        except:
+            print("Error: " + test_case['error'])
+            
+    if success == len(test_cases):
+        print("\033[92m All tests passed.")
+    else:
+        print('\033[92m', success," Tests passed")
+        print('\033[91m', len(test_cases) - success, " Tests failed")
+        raise AssertionError("Not all tests were passed for {}. Check your equations and avoid using global variables inside the function.".format(target.__name__))

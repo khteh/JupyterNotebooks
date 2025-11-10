@@ -79,3 +79,4 @@ ZTM/data/bluebook-for-bulldozers/Train_processed.csv !text !filter !merge !diff
 ZTM/models/EfficientNetV2L-224-dogbreed-20251104-133649.keras filter=lfs diff=lfs merge=lfs -text
 ZTM/models/EfficientNetV2L-224-dogbreed-20251105-193925.keras filter=lfs diff=lfs merge=lfs -text
 ZTM/models/EfficientNetV2L-224-dogbreed-20251106-212440.keras filter=lfs diff=lfs merge=lfs -text
+DeepLearning.AI/MedicalDiagnosis/data/BraTS-Data/model_pretrained.hdf5 filter=lfs diff=lfs merge=lfs -text
