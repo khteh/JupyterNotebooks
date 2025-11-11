@@ -18,3 +18,7 @@ def cindex_test_case():
     
     return y_true, scores_1, scores_2, scores_3 
 
+def fraction_rows_missing_test_case():
+    df_test = pd.DataFrame({'a':[None, 1, 1, None], 'b':[1, None, 0, 1]})
+    
+    return df_test
