@@ -62,6 +62,7 @@ def load_data(n=200):
 
 def load_data(threshold, data_x, data_y):
     X, y = nhanesi(data_x, data_y)
+    print(f"X: {X.shape}, y: {y.shape}")
     df = X.drop([X.columns[0]], axis=1)
     df.loc[:, 'time'] = y
     df.loc[:, 'death'] = np.ones(len(X))

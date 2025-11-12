@@ -4,7 +4,7 @@ AI, ML, DL, NLP and GAN exploration playground.
 
 ## Kernel
 
-- Run `pipenv install` to create a venv.
+- Run `uv sync` to create a venv.
 - In Visual Studio Code, from "Select Kernel" in the top-right corner, choose "Python environments..", then select the venv name created in the previous step.
 
 ## Environment
@@ -32,4 +32,4 @@ break-system-packages = true
 
 ### Tensorboard
 
-- `pipenv run tensorboard --logdir <path>`
+- `uv run tensorboard --logdir <path>`
