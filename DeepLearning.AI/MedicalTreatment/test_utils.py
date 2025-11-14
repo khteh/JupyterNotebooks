@@ -1,8 +1,4 @@
 import numpy as np
-import pandas as pd
-import seaborn as sns
-import sys
-from keras import backend
 np.random.seed(3)
 
 def datatype_check(expected_output, target_output, error):
